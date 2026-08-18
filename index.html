@@ -1,122 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wellomians Social Timeline</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 60px 24px;
-      background: #0b0d17;
-      color: #f7f5f2;
-      font-family: Arial, sans-serif;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-    }
-
-    h1 {
-      font-family: Georgia, serif;
-      font-size: clamp(42px, 8vw, 82px);
-      font-weight: 400;
-      line-height: .95;
-      margin: 0 0 20px;
-    }
-
-    h1 em {
-      color: #b7a3ff;
-    }
-
-    .intro {
-      max-width: 620px;
-      color: rgba(247,245,242,.65);
-      font-size: 17px;
-      line-height: 1.6;
-      margin-bottom: 44px;
-    }
-
-    .directory {
-      display: grid;
-      gap: 12px;
-    }
-
-    .person {
-      display: grid;
-      grid-template-columns: 42px 1fr auto;
-      align-items: center;
-      gap: 16px;
-      padding: 22px;
-      color: inherit;
-      text-decoration: none;
-      border: 1px solid rgba(255,255,255,.14);
-      border-radius: 18px;
-      background: rgba(255,255,255,.03);
-      transition: .3s ease;
-    }
-
-    .person:hover {
-      transform: translateY(-4px);
-      border-color: #b7a3ff;
-      background: rgba(124,92,255,.12);
-    }
-
-    .number {
-      color: #b7a3ff;
-      font-family: monospace;
-      font-size: 12px;
-    }
-
-    .name {
-      font-family: Georgia, serif;
-      font-size: 24px;
-    }
-
-    .meta {
-      margin-top: 5px;
-      color: rgba(247,245,242,.5);
-      font-size: 13px;
-    }
-
-    .arrow {
-      color: #b7a3ff;
-      font-size: 22px;
-    }
-
-    footer {
-      margin-top: 70px;
-      color: rgba(247,245,242,.4);
-      font-family: monospace;
-      font-size: 11px;
-      letter-spacing: .08em;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wellomians Social Timeline</title>
+<meta name="description" content="Meet the people behind Wellversed through interactive social timelines.">
+<style>
+:root{--bg:#0b0d17;--paper:#f7f5f2;--muted:#aaa7b6;--lav:#b7a3ff;--purple:#7c5cff;--teal:#4fd3c4;--gold:#e8b96a;--line:rgba(255,255,255,.14);--serif:Georgia,'Times New Roman',serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;--mono:'SF Mono',Consolas,monospace;--ease:cubic-bezier(.16,.84,.44,1)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;overflow-x:hidden;color:var(--paper);font-family:var(--sans);background:radial-gradient(circle at 10% 0%,rgba(124,92,255,.25),transparent 34%),radial-gradient(circle at 92% 68%,rgba(79,211,196,.11),transparent 34%),radial-gradient(circle at 45% 100%,rgba(232,185,106,.08),transparent 38%),var(--bg);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid var(--gold);outline-offset:4px;border-radius:8px}.grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}.topbar{display:flex;align-items:center;justify-content:space-between;padding:22px clamp(20px,5vw,60px);border-bottom:1px solid rgba(255,255,255,.08)}.brand{font:15px var(--serif);letter-spacing:.06em}.brand-dot{display:inline-block;width:7px;height:7px;margin-right:9px;border-radius:50%;background:var(--lav);box-shadow:0 0 12px var(--lav)}.top-note{color:#ffffff66;font:10px var(--mono);letter-spacing:.1em;text-transform:uppercase}.container{width:min(1120px,100%);margin:auto;padding:clamp(65px,10vw,125px) clamp(20px,5vw,60px)}.eyebrow{margin-bottom:18px;color:var(--lav);font:11px var(--mono);letter-spacing:.18em;text-transform:uppercase}.eyebrow:before{content:'— '}.hero-title{max-width:900px;margin:0 0 26px;font:400 clamp(55px,10vw,115px)/.9 var(--serif);letter-spacing:-.04em}.hero-title em{color:var(--lav);font-style:italic}.intro{max-width:660px;margin:0 0 55px;color:var(--muted);font-size:17px;line-height:1.65}.directory{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;list-style:none;padding:0;margin:0}.profile-card{position:relative;min-height:220px;padding:28px;overflow:hidden;border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,rgba(124,92,255,.13),rgba(255,255,255,.025));display:flex;flex-direction:column;justify-content:space-between;transition:transform .35s var(--ease),border-color .35s var(--ease),background .35s var(--ease)}.profile-card:before{content:'';position:absolute;top:-65px;right:-65px;width:190px;height:190px;border:1px dashed rgba(183,163,255,.3);border-radius:50%;transition:transform .5s var(--ease)}.profile-card:hover,.profile-card:focus-visible{transform:translateY(-7px);border-color:var(--lav);background:linear-gradient(145deg,rgba(124,92,255,.2),rgba(255,255,255,.04))}.profile-card:hover:before,.profile-card:focus-visible:before{transform:rotate(30deg) scale(1.08)}.profile-top{position:relative;z-index:1;display:flex;justify-content:flex-start}.profile-number{color:var(--lav);font:11px var(--mono);letter-spacing:.12em}.profile-name{position:relative;z-index:1;margin:20px 0 0;font:clamp(29px,4vw,44px)/1 var(--serif)}.profile-bottom{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:30px}.profile-link{color:var(--lav);font:11px var(--mono);letter-spacing:.08em;text-transform:uppercase}.arrow{display:inline-block;color:var(--lav);font-size:30px;line-height:1;transform:translateX(0);transition:transform .35s var(--ease),color .35s var(--ease)}.profile-card:hover .arrow,.profile-card:focus-visible .arrow{transform:translateX(9px);color:var(--teal)}.note{margin-top:70px;color:#ffffff55;font:10px var(--mono);letter-spacing:.1em;text-transform:uppercase}footer{padding:30px clamp(20px,5vw,60px);border-top:1px solid rgba(255,255,255,.08);color:#ffffff55;font:10px var(--mono);letter-spacing:.08em;text-align:center}@media(max-width:700px){.topbar{padding:18px}.top-note{display:none}.container{padding:65px 17px}.directory{grid-template-columns:1fr;gap:12px}.profile-card{min-height:205px;padding:22px}.profile-name{font-size:34px}.profile-bottom{margin-top:25px}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.001s!important;animation-duration:.001s!important;scroll-behavior:auto!important}}
+</style>
 </head>
 <body>
-  <main class="container">
-    <p>WELLVERSED / SOCIAL TIMELINE</p>
-
-    <h1>Meet the<br><em>Wellomians.</em></h1>
-
-    <p class="intro">
-      A collection of signals, stories, ambitions, and unfinished chapters
-      from the people who make Wellversed what it is.
-    </p>
-
-    <section class="directory">
-      <a class="person" href="profiles/aasika-jain.html">
-        <span class="number">01</span>
-        <span>
-          <span class="name">Aasika Jain</span>
-          <span class="meta">Deep-Thinker · Kolkata · ENFJ-T</span>
-        </span>
-        <span class="arrow">→</span>
-      </a>
-    </section>
-
-    <footer>BE YOU. BE WELLVERSED.</footer>
-  </main>
+<div class="grain" aria-hidden="true"></div>
+<header class="topbar"><div class="brand"><span class="brand-dot" aria-hidden="true"></span> WELLVERSED <span style="opacity:.4">/ Social Timeline</span></div><div class="top-note">Be You. Be Wellversed.</div></header>
+<main class="container"><div class="eyebrow">Wellomians Social Timeline</div><h1 class="hero-title">Meet the<br><em>Wellomians.</em></h1><p class="intro">A collection of signals, stories, ambitions, and unfinished chapters from the people who make Wellversed what it is.</p><ul class="directory" aria-label="Wellomian profiles"><li><a class="profile-card" href="profiles/aasika-jain.html"><span class="profile-top"><span class="profile-number">01</span></span><span class="profile-name">Aasika Jain</span><span class="profile-bottom"><span class="profile-link">Open timeline</span><span class="arrow" aria-hidden="true">→</span></span></a></li><li><a class="profile-card" href="profiles/aanan-khurma.html"><span class="profile-top"><span class="profile-number">02</span></span><span class="profile-name">Aanan Khurma</span><span class="profile-bottom"><span class="profile-link">Open timeline</span><span class="arrow" aria-hidden="true">→</span></span></a></li></ul><p class="note">More Wellomian stories coming soon.</p></main><footer>WELLVERSED · WELLOMIANS SOCIAL TIMELINE · BE YOU. BE WELLVERSED.</footer>
 </body>
 </html>
